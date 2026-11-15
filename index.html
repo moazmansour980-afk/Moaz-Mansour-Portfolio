@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معاذ منصور | معرض الأعمال</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--bg:#06050a;--card:rgba(20,16,38,.78);--line:rgba(139,92,246,.3);--purple:#8b5cf6;--cyan:#06b6d4;--pink:#ec4899;--green:#25d366;--white:#f8fafc;--muted:#94a3b8}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:Cairo,sans-serif;line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 10%,#39206466,transparent 35%),radial-gradient(circle at 85% 85%,#064c5a55,transparent 38%),linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:auto,auto,55px 55px,55px 55px}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:20;background:#080710dd;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+nav{max-width:1200px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:23px;font-weight:900;background:linear-gradient(90deg,#fff,var(--purple),var(--cyan));background-clip:text;color:transparent}
+.links{display:flex;gap:25px;list-style:none}.links a{color:var(--muted);font-weight:700}.links a:hover{color:var(--cyan)}
+.actions{display:flex;gap:10px;align-items:center}
+button,.btn{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:10px 17px;font-weight:800}
+.lang{background:#171229;border:1px solid var(--line);color:white}
+.whatsapp{background:var(--green);color:#062b16}
+.menu{display:none;background:#171229;color:white;border:1px solid var(--line)}
+.mobile{display:none;padding:12px 22px 20px;background:#0c0916}.mobile.open{display:grid;gap:12px}.mobile a{padding:8px;color:white}
+.hero{max-width:1200px;min-height:82vh;margin:auto;padding:70px 22px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#c4a7ff;background:#8b5cf61c;border:1px solid var(--line);border-radius:30px;padding:7px 16px;font-size:13px;font-weight:800;margin-bottom:22px}
+.pulse{width:9px;height:9px;border-radius:50%;background:#10b981;box-shadow:0 0 12px #10b981}
+h1{font-size:clamp(35px,5vw,57px);line-height:1.25;font-weight:900;margin-bottom:20px}
+.gradient{background:linear-gradient(100deg,#fff,var(--purple),var(--cyan));background-clip:text;color:transparent}
+.role{display:block;font-size:clamp(25px,3.5vw,40px);margin-top:10px}
+.lead{color:var(--muted);font-size:17px;max-width:680px;margin-bottom:25px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}.tag{background:var(--card);border:1px solid var(--line);padding:8px 13px;border-radius:12px;color:#67e8f9;font-size:13px;font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:13px}.primary{color:white;background:linear-gradient(130deg,var(--purple),#6366f1);box-shadow:0 8px 28px #8b5cf655}.secondary{background:var(--green);color:#fff}
+.showcase{max-width:410px;width:100%;justify-self:center;padding:27px;border:1px solid #a78bfa88;border-radius:26px;background:linear-gradient(145deg,#21183bdf,#0d0b18ee);box-shadow:0 25px 70px #0009;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-13px)}}
+.window{display:flex;justify-content:space-between;margin-bottom:25px;color:var(--cyan);font-size:12px;font-weight:800}.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:#ef4444}.dots i:nth-child(2){background:#f59e0b}.dots i:nth-child(3){background:#10b981}
+.orb{height:180px;border:1px solid var(--line);border-radius:18px;display:grid;place-content:center;text-align:center;gap:13px;background:radial-gradient(circle,#8b5cf644,#06b6d411,transparent)}
+.orb i{font-size:55px;color:white;text-shadow:0 0 22px var(--purple)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}.stat{text-align:center;background:#05040b88;padding:13px;border:1px solid var(--line);border-radius:13px}.stat strong{display:block;color:var(--cyan);font-size:20px}.stat small{color:var(--muted)}
+section{max-width:1200px;margin:auto;padding:85px 22px}
+.section-head{text-align:center;margin-bottom:45px}.kicker{color:var(--cyan);font-weight:900;font-size:13px;letter-spacing:1px}.section-head h2{font-size:clamp(28px,4vw,40px);font-weight:900;margin:8px 0}.section-head p{color:var(--muted)}
+.divider{display:flex;align-items:center;gap:16px;margin:38px 0 22px}.divider span{padding:8px 20px;border:1px solid var(--line);border-radius:30px;background:var(--card);font-weight:800}.divider:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--purple),transparent)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.project,.skill,.contact{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.3s}
+.project:hover,.skill:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 15px 35px #8b5cf633}
+.preview{height:190px;display:grid;place-content:center;text-align:center;gap:12px;background:radial-gradient(circle,#8b5cf633,#101020 70%);color:var(--cyan);font-size:17px;font-weight:800}.preview i{font-size:48px}
+.project-body{padding:23px}.project h3{font-size:19px;margin-bottom:8px}.project p,.skill p{font-size:14px;color:var(--muted);margin-bottom:15px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}.pills span{font-size:11px;padding:4px 10px;background:#8b5cf622;border:1px solid var(--line);border-radius:20px;color:#c4b5fd}
+.details{color:var(--cyan);font-weight:800;background:none;padding:0}
+.skills{background:#0c0916bb;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:none}
+.skills-inner{max-width:1200px;margin:auto}.skill{padding:24px}.skill h3{font-size:18px;margin-bottom:8px}.skill-icon{color:var(--cyan);font-size:24px;margin-bottom:10px}.bar{height:7px;background:#ffffff12;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--purple),var(--cyan));border-radius:10px}
+.team{margin-top:25px;padding:25px;border-radius:20px;background:linear-gradient(120deg,#8b5cf622,#06b6d422);border:1px solid var(--line)}.team h3{margin-bottom:7px}.team p{color:var(--muted)}
+.contact{padding:35px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact h3{font-size:25px;margin-bottom:10px}.contact p{color:var(--muted);margin-bottom:20px}.contact-links{display:grid;gap:12px}.contact-links a{padding:12px;background:#05040b88;border:1px solid #ffffff0c;border-radius:12px}
+form{display:grid;gap:13px}input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#080710;color:white;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--cyan)}
+footer{text-align:center;padding:27px;color:#64748b;border-top:1px solid var(--line);font-size:13px}
+.float-wa{position:fixed;bottom:22px;left:22px;background:var(--green);color:white;border-radius:40px;padding:12px 20px;font-weight:900;box-shadow:0 8px 25px #25d36655;z-index:15}
+.modal{position:fixed;inset:0;background:#000c;display:none;place-items:center;padding:20px;z-index:50}.modal.open{display:grid}.modal-box{max-width:500px;width:100%;background:#171229;border:1px solid var(--line);border-radius:20px;padding:27px}.modal-box h3{margin-bottom:12px}.modal-box p{color:var(--muted);margin-bottom:20px}.close{float:left;background:#ffffff12;color:white}
+
+/* Large Showcase Galleries (Social Media & Logos) */
+.social-showcase-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.social-count-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:30px;background:linear-gradient(135deg,#8b5cf633,#06b6d422);border:1px solid var(--cyan);color:#67e8f9;font-size:13px;font-weight:800}
+.social-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:28px}
+.logos-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-bottom:28px}
+.social-item,.logo-item{position:relative;border-radius:22px;overflow:hidden;background:linear-gradient(145deg,#1d1436,#0c0a18);border:1px solid var(--line);cursor:pointer;transition:transform .38s ease,border-color .38s ease,box-shadow .38s ease}
+.social-item{aspect-ratio:4/5}
+.logo-item{aspect-ratio:4/3}
+.social-item:hover,.logo-item:hover{transform:translateY(-8px) scale(1.015);border-color:var(--cyan);box-shadow:0 22px 45px #000a,0 0 28px #8b5cf644}
+.social-item img,.logo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.social-item:hover img,.logo-item:hover img{transform:scale(1.05)}
+.social-overlay{position:absolute;inset:0;background:linear-gradient(to top,#06050ae6 0%,#06050a55 45%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;opacity:0;transition:opacity .3s ease}
+.social-item:hover .social-overlay,.logo-item:hover .social-overlay{opacity:1}
+.social-overlay h4{font-size:17px;font-weight:800;color:#fff;margin-bottom:4px}
+.social-overlay span{font-size:12px;color:var(--cyan);font-weight:700}
+.social-zoom{position:absolute;top:14px;left:14px;width:38px;height:38px;border-radius:50%;background:#080710cc;border:1px solid var(--line);color:#fff;display:grid;place-items:center;font-size:14px;backdrop-filter:blur(8px);z-index:2}
+body.en .social-zoom{left:auto;right:14px}
+.social-fallback{width:100%;height:100%;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(circle at 30% 20%,#8b5cf638,transparent 55%),radial-gradient(circle at 80% 80%,#06b6d42b,transparent 55%),#120e24}
+.social-fallback i{font-size:42px;color:var(--cyan);margin-bottom:14px}
+.social-fallback strong{font-size:18px;color:#fff;margin-bottom:6px;display:block}
+.social-fallback small{font-size:12px;color:var(--muted);direction:ltr;word-break:break-all}
+
+/* Lightbox Modal */
+.lightbox{position:fixed;inset:0;background:#040308eb;backdrop-filter:blur(12px);display:none;align-items:center;justify-content:center;padding:24px;z-index:60}
+.lightbox.open{display:flex}
+.lightbox-content{position:relative;max-width:92vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lightbox-img{max-width:100%;max-height:78vh;border-radius:18px;border:1px solid var(--line);box-shadow:0 25px 70px #000}
+.lightbox-fallback{display:none;width:min(460px,88vw);aspect-ratio:4/3;border-radius:18px;border:1px solid var(--line);background:linear-gradient(145deg,#21183b,#0d0b18);flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px}
+.lightbox-fallback i{font-size:56px;color:var(--cyan);margin-bottom:16px}
+.lightbox-fallback strong{font-size:22px;margin-bottom:8px}
+.lightbox-fallback small{color:var(--muted);direction:ltr}
+.lightbox-caption{text-align:center;color:#fff;font-weight:800;font-size:17px}
+.lightbox-nav{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:#171229dd;border:1px solid var(--line);color:#fff;display:grid;place-items:center;font-size:18px;z-index:62}
+.lightbox-nav:hover{border-color:var(--cyan);color:var(--cyan)}
+.lightbox-prev{right:24px}
+.lightbox-next{left:24px}
+.lightbox-close{position:fixed;top:22px;left:24px;width:44px;height:44px;border-radius:50%;background:#171229dd;border:1px solid var(--line);color:#fff;font-size:18px;z-index:62}
+
+@media(max-width:950px){.social-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+@media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center;padding-top:50px}.lead{margin-inline:auto}.tags,.btns{justify-content:center}.showcase{margin-top:15px}.links{display:none}.menu{display:block}.grid,.logos-gallery{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr}.float-wa{padding:12px;border-radius:50%}.float-wa span{display:none}}
+@media(max-width:560px){.social-gallery{grid-template-columns:1fr}}
+body.en{direction:ltr;font-family:"Space Grotesk",Cairo,sans-serif}body.en .float-wa{left:auto;right:22px}
+
+/* Featured work carousel - Sharp Center + Small Blurred Side Peeks */
+.featured-wrap{max-width:1200px;margin:10px auto 30px;padding:0 22px}
+.featured-title{text-align:center;color:var(--muted);font-size:13px;font-weight:800;margin-bottom:16px}
+.featured-track{height:275px;display:block;overflow:hidden;position:relative;padding:12px 0;isolation:isolate}
+.featured-card{position:absolute;left:50%;top:50%;width:min(74%,740px);height:235px;margin:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#251747,#101827);display:grid;place-items:center;transition:filter .65s ease,opacity .65s ease,transform .65s cubic-bezier(.22,1,.36,1),box-shadow .65s ease;filter:blur(8px);opacity:0;transform:translate(calc(-50% + var(--shift, 180%)), -50%) scale(.82);z-index:1;pointer-events:none}
+.featured-card.active{filter:blur(0);opacity:1;transform:translate(-50%,-50%) scale(1);box-shadow:0 22px 55px #000a,0 0 32px #8b5cf644;border-color:#a78bfa88;z-index:4;pointer-events:auto}
+.featured-card.peek{filter:blur(8px);opacity:.32;z-index:2;pointer-events:auto;cursor:pointer}
+.featured-card.peek:hover{opacity:.48}
+.featured-art{width:84%;height:80%;border-radius:14px;display:grid;place-items:center;text-align:center;padding:20px;background:radial-gradient(circle at 75% 20%,#06b6d455,transparent 35%),linear-gradient(130deg,#21183b,#090b17);border:1px solid #ffffff25}
+.featured-art strong{font-size:clamp(21px,3.2vw,35px);line-height:1.28}
+.featured-art small{color:#a5b4fc;margin-top:8px;display:block}
+.featured-dots{display:flex;justify-content:center;gap:8px;margin-top:8px}
+.featured-dots i{width:7px;height:7px;border-radius:50%;background:#ffffff35;transition:.3s;cursor:pointer}
+.featured-dots i.active{width:24px;border-radius:8px;background:var(--cyan)}
+.category-block{margin-top:46px}
+.category-rule{display:flex;align-items:center;gap:16px;margin:0 0 24px}
+.category-rule:before,.category-rule:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--purple),transparent)}
+.category-rule span{white-space:nowrap;padding:8px 22px;border:1px solid var(--line);border-radius:30px;background:var(--card);font-weight:900}
+#portfolio .grid{margin-bottom:10px}
+@media(max-width:650px){.featured-track{height:205px}.featured-card{width:80%;height:175px}.featured-art{width:88%;height:80%}}
+
+
+/* Video portfolio */
+.video-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.video-project .video-frame{background:#05040b;aspect-ratio:16/9;display:flex;align-items:center}
+.video-project video{width:100%;height:100%;max-height:420px;object-fit:contain;background:#000}
+@media(max-width:650px){.video-gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><nav>
+<a class="brand" href="#home">● Moaaz Mansour</a>
+<ul class="links"><li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li><li><a href="#portfolio" data-ar="معرض الأعمال" data-en="Portfolio">معرض الأعمال</a></li><li><a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a></li><li><a href="#contact" data-ar="تواصل معي" data-en="Contact">تواصل معي</a></li></ul>
+<div class="actions"><a class="btn whatsapp" href="https://wa.me/966508556937" target="_blank"><i class="fab fa-whatsapp"></i> <span data-ar="واتساب" data-en="WhatsApp">واتساب</span></a><button class="lang" id="language">English</button><button class="menu" id="menu"><i class="fas fa-bars"></i></button></div>
+</nav><div class="mobile" id="mobile"><a href="#home">الرئيسية</a><a href="#portfolio">معرض الأعمال</a><a href="#skills">المهارات</a><a href="#contact">تواصل معي</a></div></header>
+<main>
+<div class="hero" id="home"><div>
+<div class="eyebrow"><i class="pulse"></i><span data-ar="متاح للعمل الحر والمشاريع الجماعية" data-en="Available for freelance & team projects">متاح للعمل الحر والمشاريع الجماعية</span></div>
+<h1><span data-ar="أهلاً، أنا" data-en="Hey, I'm">أهلاً، أنا</span> <span class="gradient" data-ar="معاذ منصور" data-en="Moaaz Mansour">معاذ منصور</span><span class="gradient role" data-ar="مصمم جرافيك ومطور ويب وتطبيقات" data-en="Graphic Designer & Web/App Developer">مصمم جرافيك ومطور ويب وتطبيقات</span></h1>
+<p class="lead" data-ar="أقدم حلولاً رقمية وبصرية متكاملة، من تصميم الشعارات والهويات الإعلانية إلى تطوير المواقع والتطبيقات التفاعلية، مع التعاون مع فريق عمل لإنجاز المشاريع." data-en="I create digital and visual solutions, from logos and brand identities to interactive websites and applications, collaborating with a team when projects require it.">أقدم حلولاً رقمية وبصرية متكاملة، من تصميم الشعارات والهويات الإعلانية إلى تطوير المواقع والتطبيقات التفاعلية، مع التعاون مع فريق عمل لإنجاز المشاريع.</p>
+<div class="tags"><span class="tag"><i class="fas fa-palette"></i> <span data-ar="تصاميم السوشيال ميديا" data-en="Social Media Design">تصاميم السوشيال ميديا</span></span><span class="tag"><i class="fas fa-shapes"></i> <span data-ar="الشعارات والهويات" data-en="Logo & Branding">الشعارات والهويات</span></span><span class="tag"><i class="fas fa-code"></i> <span data-ar="المواقع والتطبيقات" data-en="Web & Apps">المواقع والتطبيقات</span></span></div>
+<div class="btns"><a class="btn primary" href="#portfolio" data-ar="استكشف أعمالي ←" data-en="Explore My Work →">استكشف أعمالي ←</a><a class="btn secondary" href="https://wa.me/966508556937" target="_blank"><i class="fab fa-whatsapp"></i> <span data-ar="تواصل واتساب" data-en="WhatsApp Chat">تواصل واتساب</span></a></div>
+</div><div class="showcase"><div class="window"><div class="dots"><i></i><i></i><i></i></div><span data-ar="استوديو إبداعي" data-en="Creative Studio">استوديو إبداعي</span></div><div class="orb"><i class="fas fa-layer-group"></i><b data-ar="من الفكرة إلى الإطلاق" data-en="Concept to Launch">من الفكرة إلى الإطلاق</b></div><div class="stats"><div class="stat"><strong>UI / UX</strong><small data-ar="تصميم وتجربة" data-en="Design & Flow">تصميم وتجربة</small></div><div class="stat"><strong>Web</strong><small data-ar="تطوير المواقع" data-en="Web Development">تطوير المواقع</small></div></div></div></div>
+
+<div class="featured-wrap" aria-label="معرض متحرك لأبرز التصاميم">
+  <div class="featured-title" data-ar="لمحة من الأعمال" data-en="A GLIMPSE OF MY WORK">لمحة من الأعمال</div>
+  <div class="featured-track" id="featuredTrack">
+    <div class="featured-card"><div class="featured-art"><div><strong>BRAND<br>IDENTITY</strong><small>LOGO & VISUAL IDENTITY</small></div></div></div>
+    <div class="featured-card active"><div class="featured-art"><div><strong>CREATIVE<br>DESIGNS</strong><small>SOCIAL MEDIA CAMPAIGNS</small></div></div></div>
+    <div class="featured-card"><div class="featured-art"><div><strong>DIGITAL<br>EXPERIENCE</strong><small>WEBSITES & APPLICATIONS</small></div></div></div>
+    <div class="featured-card"><div class="featured-art"><div><strong>VISUAL<br>STORY</strong><small>CREATIVE CONTENT</small></div></div></div>
+  </div>
+  <div class="featured-dots" id="featuredDots"><i></i><i class="active"></i><i></i><i></i></div>
+</div>
+
+<section id="portfolio"><div class="section-head"><span class="kicker" data-ar="سجل الإبداع" data-en="CREATIVE SHOWCASE">سجل الإبداع</span><h2 data-ar="معرض الأعمال والمشاريع" data-en="Portfolio & Projects">معرض الأعمال والمشاريع</h2><p data-ar="نماذج من مجالات العمل والخدمات التي أقدمها." data-en="A selection of work categories and services.">نماذج من مجالات العمل والخدمات التي أقدمها.</p></div>
+
+<div class="category-block">
+  <div class="category-rule"><span data-ar="تصاميم السوشيال ميديا" data-en="Social Media Designs">تصاميم السوشيال ميديا</span></div>
+  <div class="social-showcase-head">
+    <p style="color:var(--muted);font-size:14px" data-ar="مجموعة مختارة من الحملات الإعلانية وتصاميم المطاعم والمشاريع التجارية — اضغط على أي تصميم لعرضه بالحجم الكامل." data-en="Selected advertising campaigns & commercial social media creatives — click any design to view full size.">مجموعة مختارة من الحملات الإعلانية وتصاميم المطاعم والمشاريع التجارية — اضغط على أي تصميم لعرضه بالحجم الكامل.</p>
+    <span class="social-count-badge"><i class="fas fa-layer-group"></i> <span data-ar="+12 تصميم إعلاني" data-en="+12 Ad Creatives">+12 تصميم إعلاني</span></span>
+  </div>
+  <div class="social-gallery" id="socialGallery">
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="0" data-ar-title="مشهور — حملة خصم 50% عيد العمال" data-en-title="Mashhoor Fried Chicken — 50% Off Campaign" data-src="f3aa2f7a-e29f-42ff-9200-6564bb162b1f.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="f3aa2f7a-e29f-42ff-9200-6564bb162b1f.jpg" alt="مشهور نجم الدجاج المقلي" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>مشهور — خصم 50%</strong><small>f3aa2f7a-e29f-42ff-9200-6564bb162b1f.jpg</small></div>
+      <div class="social-overlay"><h4>مشهور — خصم 50%</h4><span>Social Media • Photo Manipulation</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="1" data-ar-title="إعلان سبايسي تشيكن — دمج بصري ديناميكي" data-en-title="Ayam Spicy — Dynamic Food Compositing" data-src="59621e8e-bc3f-4dc9-a43f-a73d4557379f.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="59621e8e-bc3f-4dc9-a43f-a73d4557379f.jpg" alt="Ayam Spicy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>Ayam Spicy</strong><small>59621e8e-bc3f-4dc9-a43f-a73d4557379f.jpg</small></div>
+      <div class="social-overlay"><h4>Ayam Spicy</h4><span>Social Media • Visual Compositing</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="2" data-ar-title="كشك حمد — الويكند يبيله تضرب بالخمس" data-en-title="Koshk Hamad — Weekend Majboos Feast" data-src="21a70f62-71cc-40f3-b902-b057d41259bd.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="21a70f62-71cc-40f3-b902-b057d41259bd.jpg" alt="كشك حمد مجبوس" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>كشك حمد — الويكند يبيله تضرب بالخمس</strong><small>21a70f62-71cc-40f3-b902-b057d41259bd.jpg</small></div>
+      <div class="social-overlay"><h4>كشك حمد — الويكند يبيله تضرب بالخمس</h4><span>Social Media • Restaurant Campaign</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="3" data-ar-title="لذيذ كريسبي — إذا الجوع تكلم الكريسبي يرد" data-en-title="Lazeez Crispo — Restaurant Ad Design" data-src="6c33ba13-d1ce-40a4-9566-6c84128835d3.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="6c33ba13-d1ce-40a4-9566-6c84128835d3.jpg" alt="لذيذ كريسبي" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>لذيذ كريسبي — إذا الجوع تكلم</strong><small>6c33ba13-d1ce-40a4-9566-6c84128835d3.jpg</small></div>
+      <div class="social-overlay"><h4>لذيذ كريسبي — إذا الجوع تكلم</h4><span>Social Media • Advertising</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="4" data-ar-title="أبو الحطب فاست فود — طيب يسعد لحظاتك" data-en-title="Abu Al-Hatab Fast Food — Social Promo" data-src="db10045d-bc96-488d-8e13-b4850134d207.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="db10045d-bc96-488d-8e13-b4850134d207.jpg" alt="أبو الحطب فاست فود" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>أبو الحطب — طيب يسعد لحظاتك</strong><small>db10045d-bc96-488d-8e13-b4850134d207.jpg</small></div>
+      <div class="social-overlay"><h4>أبو الحطب — طيب يسعد لحظاتك</h4><span>Social Media • Food Styling</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="5" data-ar-title="أكاديمية الإيمان — 3 أشياء تخلي ولدك متكتف وقت الاختبار" data-en-title="Al-Iman Academy — Educational Campaign" data-src="5a85d459-5af8-4726-b203-0b21ee69ada0.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="5a85d459-5af8-4726-b203-0b21ee69ada0.jpg" alt="أكاديمية الإيمان" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>أكاديمية الإيمان — حملة تعليمية</strong><small>5a85d459-5af8-4726-b203-0b21ee69ada0.jpg</small></div>
+      <div class="social-overlay"><h4>أكاديمية الإيمان — حملة تعليمية</h4><span>Social Media • Creative Concept</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="6" data-ar-title="أركان المندي — ثواني ونكون عندك" data-en-title="Arkan Al-Mandi — Fast Delivery Campaign" data-src="04d58d29-faaf-4699-8706-2611e04bb58d.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="04d58d29-faaf-4699-8706-2611e04bb58d.jpg" alt="أركان المندي ثواني ونكون عندك" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>أركان المندي — ثواني ونكون عندك</strong><small>04d58d29-faaf-4699-8706-2611e04bb58d.jpg</small></div>
+      <div class="social-overlay"><h4>أركان المندي — ثواني ونكون عندك</h4><span>Social Media • Delivery Promo</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="7" data-ar-title="تشيك إكس دبي — The Crunch That's Taking Over Dubai" data-en-title="Chikex UAE — Taking Over Dubai Campaign" data-src="7cf62c9d-1695-41e4-8d65-2978f2500a2a.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="7cf62c9d-1695-41e4-8d65-2978f2500a2a.jpg" alt="Chikex Dubai" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>Chikex UAE — Dubai Campaign</strong><small>7cf62c9d-1695-41e4-8d65-2978f2500a2a.jpg</small></div>
+      <div class="social-overlay"><h4>Chikex UAE — Dubai Campaign</h4><span>Social Media • 3D Perspective</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="8" data-ar-title="ما أصعب النهايات — إعلان إبداعي للبطاطس" data-en-title="Creative Fries Ad — Perspective Concept" data-src="273c03b9-9440-4468-b4c4-4f127a8501ad.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="273c03b9-9440-4468-b4c4-4f127a8501ad.jpg" alt="ما أصعب النهايات" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>ما أصعب النهايات</strong><small>273c03b9-9440-4468-b4c4-4f127a8501ad.jpg</small></div>
+      <div class="social-overlay"><h4>ما أصعب النهايات</h4><span>Social Media • Creative Angle</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="9" data-ar-title="أبتاون لاونج — وافل فواكه على مزاجك" data-en-title="Uptown Lounge — Fruit Waffle Promo" data-src="1c4f2c31-eedf-4a73-8790-395caca589fe.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="1c4f2c31-eedf-4a73-8790-395caca589fe.jpg" alt="أبتاون لاونج وافل فواكه" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>أبتاون لاونج — وافل فواكه على مزاجك</strong><small>1c4f2c31-eedf-4a73-8790-395caca589fe.jpg</small></div>
+      <div class="social-overlay"><h4>أبتاون لاونج — وافل فواكه على مزاجك</h4><span>Social Media • Cafe & Dessert</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="10" data-ar-title="دبي تشيكن — كرسبي يلم العيلة وجبة الـ 9 قطع" data-en-title="Dubai Chicken — Family 9-Piece Crispy Meal" data-src="1d0d3523-f992-4df0-b882-355e07cbc88e.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="1d0d3523-f992-4df0-b882-355e07cbc88e.jpg" alt="دبي تشيكن كرسبي يلم العيلة" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>دبي تشيكن — كرسبي يلم العيلة</strong><small>1d0d3523-f992-4df0-b882-355e07cbc88e.jpg</small></div>
+      <div class="social-overlay"><h4>دبي تشيكن — كرسبي يلم العيلة</h4><span>Social Media • Family Meal Promo</span></div>
+    </div>
+    <div class="social-item gallery-trigger" data-gallery="social" data-index="11" data-ar-title="زاز برجر — في صنف من زاز ما جربته للحين؟" data-en-title="Zaz Burger — Interactive Poll Social Post" data-src="48df1767-18e2-4a0f-9b0c-33c028f9876c.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="48df1767-18e2-4a0f-9b0c-33c028f9876c.jpg" alt="زاز برجر" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-image"></i><strong>زاز برجر — حملة تفاعلية</strong><small>48df1767-18e2-4a0f-9b0c-33c028f9876c.jpg</small></div>
+      <div class="social-overlay"><h4>زاز برجر — حملة تفاعلية</h4><span>Social Media • Engagement Design</span></div>
+    </div>
+  </div>
+  <div class="grid">
+    <article class="project"><div class="preview"><i class="fas fa-bullhorn"></i><span data-ar="حملات إعلانية وتصاميم" data-en="Advertising Campaigns">حملات إعلانية وتصاميم</span></div><div class="project-body"><h3 data-ar="بوسترات وتصاميم سوشيال ميديا" data-en="Social Media Creatives">بوسترات وتصاميم سوشيال ميديا</h3><p data-ar="تصاميم لمنصات التواصل تركز على جذب الانتباه والدمج البصري وتناسق الألوان." data-en="Social media designs focused on attention, visual compositing and color harmony.">تصاميم لمنصات التواصل تركز على جذب الانتباه والدمج البصري وتناسق الألوان.</p><div class="pills"><span>Photoshop</span><span>Color Grading</span><span>Advertising</span></div><button class="details" data-title="تصاميم السوشيال ميديا" data-desc="نماذج أعمال الحملات الإعلانية وتصاميم منصات التواصل.">عرض التفاصيل ↗</button></div></article>
+  </div>
+</div>
+
+<div class="category-block">
+  <div class="category-rule"><span data-ar="تصميم اللوجوهات والهويات" data-en="Logos & Brand Identity">تصميم اللوجوهات والهويات</span></div>
+  <div class="social-showcase-head">
+    <p style="color:var(--muted);font-size:14px" data-ar="نماذج من الشعارات التجارية والخطوط العربية المخصصة والهويات البصرية المتكاملة — اضغط للمعاينة بالحجم الكامل." data-en="Selected brand logos, custom Arabic typography, and complete visual identities — click to view full size.">نماذج من الشعارات التجارية والخطوط العربية المخصصة والهويات البصرية المتكاملة — اضغط للمعاينة بالحجم الكامل.</p>
+    <span class="social-count-badge"><i class="fas fa-shapes"></i> <span data-ar="8 شعارات وهويات بصرية" data-en="8 Logos & Brand Identities">8 شعارات وهويات بصرية</span></span>
+  </div>
+  <div class="logos-gallery" id="logosGallery">
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="0" data-ar-title="شعار رصيد (RASIID) — هوية ثنائية اللغة" data-en-title="RASIID — Bilingual Logo & App Icon" data-src="تصميم بدون عنوان (13)_page-0001.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="تصميم بدون عنوان (13)_page-0001.jpg" alt="RASIID رصيد" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>رصيد — RASIID</strong><small>تصميم بدون عنوان (13)_page-0001.jpg</small></div>
+      <div class="social-overlay"><h4>رصيد — RASIID</h4><span>Bilingual Typography • App Identity</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="1" data-ar-title="باندل باير (Bundle Buyer) — هوية تجارية متكاملة" data-en-title="Bundle Buyer — Complete Brand Identity" data-src="SunUp Fresh_page-0001.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="SunUp Fresh_page-0001.jpg" alt="Bundle Buyer" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>Bundle Buyer</strong><small>SunUp Fresh_page-0001.jpg</small></div>
+      <div class="social-overlay"><h4>Bundle Buyer</h4><span>Monogram • Brand Guidelines</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="2" data-ar-title="شعار BABA — مونوغرام وأيقونة ودودة" data-en-title="BABA — Monogram & Friendly Brand Mark" data-src="BABA_page-0001.jpg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="BABA_page-0001.jpg" alt="BABA Logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>BABA</strong><small>BABA_page-0001.jpg</small></div>
+      <div class="social-overlay"><h4>BABA</h4><span>Logo Mark • Monogram</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="3" data-ar-title="كرانشيكن (CRUNCHICKEN) — شعار وهوية مطعم وتغليف" data-en-title="CRUNCHICKEN — Restaurant Logo & Packaging Identity" data-src="WhatsApp Image 2026-11-15 at 10.07.50 PM (1).jpeg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="WhatsApp Image 2026-11-15 at 10.07.50 PM (1).jpeg" alt="CRUNCHICKEN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>CRUNCHICKEN</strong><small>WhatsApp Image 2026-11-15 at 10.07.50 PM (1).jpeg</small></div>
+      <div class="social-overlay"><h4>CRUNCHICKEN</h4><span>Restaurant Identity • Packaging & Uniforms</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="4" data-ar-title="شعار MES — تصميم هندسي حديث" data-en-title="MES — Modern Geometric Logomark" data-src="WhatsApp Image 2026-11-15 at 10.07.50 PM (2).jpeg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="WhatsApp Image 2026-11-15 at 10.07.50 PM (2).jpeg" alt="MES Logo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>MES</strong><small>WhatsApp Image 2026-11-15 at 10.07.50 PM (2).jpeg</small></div>
+      <div class="social-overlay"><h4>MES</h4><span>Geometric Monogram • Minimal Identity</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="5" data-ar-title="شعار جُوان — تايبوجرافي عربي هندسي" data-en-title="Jowan — Geometric Arabic Calligraphic Logo" data-src="WhatsApp Image 2026-11-15 at 10.07.50 PM (3).jpeg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="WhatsApp Image 2026-11-15 at 10.07.50 PM (3).jpeg" alt="شعار جوان" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>شعار جُوان</strong><small>WhatsApp Image 2026-11-15 at 10.07.50 PM (3).jpeg</small></div>
+      <div class="social-overlay"><h4>شعار جُوان</h4><span>Arabic Typography • Custom Lettering</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="6" data-ar-title="شعار تاوي — خط عربي حر وانسيابي" data-en-title="Tawi — Custom Fluid Arabic Logotype" data-src="WhatsApp Image 2026-11-15 at 10.07.50 PM (4).jpeg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="WhatsApp Image 2026-11-15 at 10.07.50 PM (4).jpeg" alt="شعار تاوي" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>شعار تاوي</strong><small>WhatsApp Image 2026-11-15 at 10.07.50 PM (4).jpeg</small></div>
+      <div class="social-overlay"><h4>شعار تاوي</h4><span>Arabic Calligraphy • Brand Mark</span></div>
+    </div>
+    <div class="logo-item gallery-trigger" data-gallery="logos" data-index="7" data-ar-title="شاورما الصاج — هوية بصرية وتطبيقات تغليف وأسطول" data-en-title="Shawarma Al-Saj — Full Brand Identity & Packaging" data-src="WhatsApp Image 2026-11-15 at 10.07.50 PM.jpeg">
+      <span class="social-zoom"><i class="fas fa-expand"></i></span>
+      <img src="WhatsApp Image 2026-11-15 at 10.07.50 PM.jpeg" alt="شاورما الصاج" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="social-fallback"><i class="fas fa-shapes"></i><strong>شاورما الصاج</strong><small>WhatsApp Image 2026-11-15 at 10.07.50 PM.jpeg</small></div>
+      <div class="social-overlay"><h4>شاورما الصاج</h4><span>Full Brand Identity • Packaging & Fleet</span></div>
+    </div>
+  </div>
+  <div class="grid">
+    <article class="project"><div class="preview"><i class="fas fa-shapes"></i><span data-ar="شعارات وهوية بصرية" data-en="Logo & Brand Identity">شعارات وهوية بصرية</span></div><div class="project-body"><h3 data-ar="تصميم شعار وهوية بصرية" data-en="Logo & Brand Identity">تصميم شعار وهوية بصرية</h3><p data-ar="ابتكار شعارات عصرية وتجهيزها للاستخدامات الرقمية والمطبوعة." data-en="Modern logo concepts prepared for digital and print use.">ابتكار شعارات عصرية وتجهيزها للاستخدامات الرقمية والمطبوعة.</p><div class="pills"><span>Illustrator</span><span>Vector</span><span>Branding</span></div><button class="details" data-title="تصميم شعار وهوية بصرية" data-desc="نماذج أعمال الشعارات والهويات البصرية.">عرض التفاصيل ↗</button></div></article>
+  </div>
+</div>
+
+<div class="category-block">
+  <div class="category-rule"><span data-ar="المواقع والتطبيقات" data-en="Websites & Applications">المواقع والتطبيقات</span></div>
+  <div class="video-gallery">
+<article class="project video-project">
+      <div class="video-frame"><video controls playsinline preload="metadata">
+        <source src="video-1.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video></div>
+      <div class="project-body"><h3 data-ar="فيديو أعمال 1" data-en="Video Project 1">فيديو أعمال 1</h3>
+      <p data-ar="عرض فيديو من أعمالي في المونتاج والمحتوى المرئي." data-en="A video showcase from my editing and visual-content work.">عرض فيديو من أعمالي في المونتاج والمحتوى المرئي.</p>
+      <div class="pills"><span>Video Editing</span><span>Motion</span></div></div>
+    </article>
+<article class="project video-project">
+      <div class="video-frame"><video controls playsinline preload="metadata">
+        <source src="video-2.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video></div>
+      <div class="project-body"><h3 data-ar="فيديو أعمال 2" data-en="Video Project 2">فيديو أعمال 2</h3>
+      <p data-ar="عرض فيديو من أعمالي في المونتاج والمحتوى المرئي." data-en="A video showcase from my editing and visual-content work.">عرض فيديو من أعمالي في المونتاج والمحتوى المرئي.</p>
+      <div class="pills"><span>Video Editing</span><span>Motion</span></div></div>
+    </article>
+<article class="project video-project">
+      <div class="video-frame"><video controls playsinline preload="metadata">
+        <source src="video-3.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video></div>
+      <div class="project-body"><h3 data-ar="فيديو أعمال 3" data-en="Video Project 3">فيديو أعمال 3</h3>
+      <p data-ar="عرض فيديو من أعمالي في المونتاج والمحتوى المرئي." data-en="A video showcase from my editing and visual-content work.">عرض فيديو من أعمالي في المونتاج والمحتوى المرئي.</p>
+      <div class="pills"><span>Video Editing</span><span>Motion</span></div></div>
+    </article>
+<article class="project video-project">
+      <div class="video-frame"><video controls playsinline preload="metadata">
+        <source src="video-4.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video></div>
+      <div class="project-body"><h3 data-ar="فيديو أعمال 4" data-en="Video Project 4">فيديو أعمال 4</h3>
+      <p data-ar="عرض فيديو من أعمالي في المونتاج والمحتوى المرئي." data-en="A video showcase from my editing and visual-content work.">عرض فيديو من أعمالي في المونتاج والمحتوى المرئي.</p>
+      <div class="pills"><span>Video Editing</span><span>Motion</span></div></div>
+    </article>
+  </div>
+</div>
+</section>
+<div class="skills"><section id="skills" class="skills-inner"><div class="section-head"><span class="kicker" data-ar="الأدوات والمهارات" data-en="EXPERTISE & TOOLKIT">الأدوات والمهارات</span><h2 data-ar="المهارات والبرامج الإبداعية" data-en="Skills & Creative Software">المهارات والبرامج الإبداعية</h2><p data-ar="الأدوات والتقنيات المستخدمة في تنفيذ الأعمال." data-en="Tools and technologies used in my work.">الأدوات والتقنيات المستخدمة في تنفيذ الأعمال.</p></div><div class="grid">
+<div class="skill"><div class="skill-icon"><i class="fas fa-image"></i></div><h3>Adobe Photoshop</h3><p data-ar="معالجة الصور والدمج البصري وتصميم الإعلانات." data-en="Photo editing, compositing and advertising design.">معالجة الصور والدمج البصري وتصميم الإعلانات.</p><div class="bar"><i style="--w:100%"></i></div></div>
+<div class="skill"><div class="skill-icon"><i class="fas fa-bezier-curve"></i></div><h3>Adobe Illustrator</h3><p data-ar="تصميم الفيكتور والشعارات والهويات البصرية." data-en="Vector design, logos and brand identities.">تصميم الفيكتور والشعارات والهويات البصرية.</p><div class="bar"><i style="--w:100%"></i></div></div>
+<div class="skill"><div class="skill-icon"><i class="fab fa-figma"></i></div><h3>Figma UI / UX</h3><p data-ar="تصميم واجهات المواقع والتطبيقات والنماذج التفاعلية." data-en="Website and app interfaces with interactive prototypes.">تصميم واجهات المواقع والتطبيقات والنماذج التفاعلية.</p><div class="bar"><i style="--w:100%"></i></div></div>
+<div class="skill"><div class="skill-icon"><i class="fas fa-code"></i></div><h3>Web Development</h3><p data-ar="HTML وCSS وJavaScript وتطوير واجهات متجاوبة." data-en="HTML, CSS, JavaScript and responsive interfaces.">HTML وCSS وJavaScript وتطوير واجهات متجاوبة.</p><div class="bar"><i style="--w:100%"></i></div></div>
+<div class="skill"><div class="skill-icon"><i class="fas fa-film"></i></div><h3>Premiere & After Effects</h3><p data-ar="مونتاج الفيديو والمؤثرات والموشن جرافيك." data-en="Video editing, visual effects and motion graphics.">مونتاج الفيديو والمؤثرات والموشن جرافيك.</p><p data-ar="أعمل على تطوير مهاراتي في المونتاج والمؤثرات." data-en="Currently developing my video editing and motion skills.">أعمل على تطوير مهاراتي في المونتاج والمؤثرات.</p><div class="bar"><i style="--w:65%"></i></div></div>
+<div class="skill"><div class="skill-icon"><i class="fas fa-camera"></i></div><h3>Photography & Editing</h3><p data-ar="تصوير المنتجات ومعالجة الصور وتجهيزها للنشر." data-en="Product photography and image editing for publishing.">تصوير المنتجات ومعالجة الصور وتجهيزها للنشر.</p><div class="bar"><i style="--w:100%"></i></div></div>
+</div><div class="team"><h3 data-ar="التعاون مع فريق عمل" data-en="Team Collaboration">التعاون مع فريق عمل</h3><p data-ar="أتعاون مع متخصصين في مجالات التصميم والتطوير لتنفيذ المشاريع التي تتطلب أكثر من تخصص، مع توضيح دوري ونطاق مساهمتي في كل مشروع." data-en="I collaborate with design and development specialists on projects requiring multiple disciplines, with clear roles and responsibilities.">أتعاون مع متخصصين في مجالات التصميم والتطوير لتنفيذ المشاريع التي تتطلب أكثر من تخصص، مع توضيح دوري ونطاق مساهمتي في كل مشروع.</p></div></section></div>
+<section id="contact"><div class="section-head"><span class="kicker" data-ar="ابدأ مشروعك" data-en="LET'S WORK TOGETHER">ابدأ مشروعك</span><h2 data-ar="تواصل معي" data-en="Get in Touch">تواصل معي</h2></div><div class="contact"><div class="contact-grid"><div><h3 data-ar="خلينا نتكلم عن فكرتك" data-en="Let's discuss your idea">خلينا نتكلم عن فكرتك</h3><p data-ar="للاستفسارات أو طلب عرض سعر، تواصل معي مباشرة." data-en="For inquiries or project quotes, contact me directly.">للاستفسارات أو طلب عرض سعر، تواصل معي مباشرة.</p><div class="contact-links"><a href="mailto:moazmansour@gmail.com"><i class="fas fa-envelope"></i> moazmansour@gmail.com</a><a href="https://wa.me/966508556937" target="_blank"><i class="fab fa-whatsapp"></i> 0508556937</a></div></div><form id="contactForm"><input required placeholder="الاسم الكريم" data-ar-ph="الاسم الكريم" data-en-ph="Your Name"><input type="email" required placeholder="البريد الإلكتروني" data-ar-ph="البريد الإلكتروني" data-en-ph="Your Email"><textarea rows="4" required placeholder="تفاصيل المشروع أو الفكرة..." data-ar-ph="تفاصيل المشروع أو الفكرة..." data-en-ph="Project details or idea..."></textarea><button class="btn primary" type="submit" data-ar="إرسال عبر واتساب" data-en="Send via WhatsApp">إرسال عبر واتساب</button></form></div></div></section>
+</main>
+<a class="float-wa" href="https://wa.me/966508556937" target="_blank"><i class="fab fa-whatsapp"></i> <span data-ar="تواصل واتساب" data-en="WhatsApp Chat">تواصل واتساب</span></a>
+<footer>© 2026 معاذ منصور | جميع الحقوق محفوظة</footer>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">✕</button><h3 id="modalTitle"></h3><p id="modalDesc"></p><a class="btn secondary" href="https://wa.me/966508556937" target="_blank">تواصل عبر واتساب</a></div></div>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lbClose" aria-label="إغلاق">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="السابق"><i class="fas fa-chevron-right"></i></button>
+  <div class="lightbox-content">
+    <img class="lightbox-img" id="lbImg" src="" alt="" onerror="this.style.display='none';document.getElementById('lbFallback').style.display='flex'">
+    <div class="lightbox-fallback" id="lbFallback"><i class="fas fa-image"></i><strong id="lbFbTitle"></strong><small id="lbFbFile"></small></div>
+    <div class="lightbox-caption" id="lbCaption"></div>
+  </div>
+  <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="التالي"><i class="fas fa-chevron-left"></i></button>
+</div>
+<script>
+
+const featuredCards=[...document.querySelectorAll('.featured-card')];
+const featuredDots=[...document.querySelectorAll('#featuredDots i')];
+let featuredIndex=1;
+function updateFeatured(){
+ const isEn=document.body.classList.contains('en');
+ const dirSign=isEn?1:-1;
+ const count=featuredCards.length;
+ featuredCards.forEach((card,i)=>{
+  let offset=i-featuredIndex;
+  if(offset>count/2) offset-=count;
+  if(offset<-count/2) offset+=count;
+  card.classList.remove('active','peek');
+  if(offset===0){
+   card.style.setProperty('--shift','0%');
+   card.style.transform='translate(-50%, -50%) scale(1)';
+   card.classList.add('active');
+   card.style.zIndex='4';
+  }else if(offset===-1 || offset===1){
+   const shiftVal=offset*dirSign*94;
+   card.style.setProperty('--shift',`${shiftVal}%`);
+   card.style.transform=`translate(calc(-50% + ${shiftVal}%), -50%) scale(.84)`;
+   card.classList.add('peek');
+   card.style.zIndex='2';
+  }else{
+   const farShift=offset*dirSign*160;
+   card.style.setProperty('--shift',`${farShift}%`);
+   card.style.transform=`translate(calc(-50% + ${farShift}%), -50%) scale(.75)`;
+   card.style.zIndex='1';
+  }
+ });
+ featuredDots.forEach((dot,i)=>dot.classList.toggle('active',i===featuredIndex));
+}
+if(featuredCards.length){
+ updateFeatured();
+ let featuredTimer=setInterval(()=>{featuredIndex=(featuredIndex+1)%featuredCards.length;updateFeatured();},3200);
+ const resetFeaturedTimer=()=>{
+  clearInterval(featuredTimer);
+  featuredTimer=setInterval(()=>{featuredIndex=(featuredIndex+1)%featuredCards.length;updateFeatured();},3200);
+ };
+ featuredCards.forEach((card,i)=>card.addEventListener('click',()=>{
+  if(i!==featuredIndex){featuredIndex=i;updateFeatured();resetFeaturedTimer();}
+ }));
+ featuredDots.forEach((dot,i)=>dot.addEventListener('click',()=>{
+  featuredIndex=i;updateFeatured();resetFeaturedTimer();
+ }));
+}
+
+const galleries={
+ social:[...document.querySelectorAll('.gallery-trigger[data-gallery="social"]')],
+ logos:[...document.querySelectorAll('.gallery-trigger[data-gallery="logos"]')]
+};
+const lightbox=document.getElementById('lightbox');
+const lbImg=document.getElementById('lbImg');
+const lbFallback=document.getElementById('lbFallback');
+const lbCaption=document.getElementById('lbCaption');
+let activeGallery='social';
+let currentSlide=0;
+
+function openLightbox(galleryName,idx){
+ activeGallery=galleryName;
+ const list=galleries[activeGallery];
+ currentSlide=(idx+list.length)%list.length;
+ const item=list[currentSlide];
+ const src=item.dataset.src;
+ const title=item.getAttribute('data-'+lang+'-title')||item.dataset.arTitle;
+ lbImg.style.display='block';
+ lbFallback.style.display='none';
+ document.getElementById('lbFbTitle').textContent=title;
+ document.getElementById('lbFbFile').textContent=src;
+ lbImg.src=src;
+ lbImg.alt=title;
+ lbCaption.textContent=`${title} (${currentSlide+1} / ${list.length})`;
+ lightbox.classList.add('open');
+}
+
+Object.keys(galleries).forEach(gName=>{
+ galleries[gName].forEach((item,i)=>item.addEventListener('click',()=>openLightbox(gName,i)));
+});
+document.getElementById('lbClose').onclick=()=>lightbox.classList.remove('open');
+document.getElementById('lbPrev').onclick=()=>openLightbox(activeGallery,currentSlide-1);
+document.getElementById('lbNext').onclick=()=>openLightbox(activeGallery,currentSlide+1);
+lightbox.onclick=e=>{if(e.target===lightbox)lightbox.classList.remove('open')};
+document.addEventListener('keydown',e=>{
+ if(!lightbox.classList.contains('open'))return;
+ if(e.key==='Escape')lightbox.classList.remove('open');
+ if(e.key==='ArrowLeft')openLightbox(activeGallery,lang==='ar'?currentSlide+1:currentSlide-1);
+ if(e.key==='ArrowRight')openLightbox(activeGallery,lang==='ar'?currentSlide-1:currentSlide+1);
+});
+
+let lang='ar';
+document.getElementById('language').addEventListener('click',()=>{
+ lang=lang==='ar'?'en':'ar';document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.body.classList.toggle('en',lang==='en');
+ document.getElementById('language').textContent=lang==='ar'?'English':'العربية';
+ document.querySelectorAll('[data-ar]').forEach(el=>{el.textContent=el.getAttribute('data-'+lang)});
+ document.querySelectorAll('[data-ar-ph]').forEach(el=>{el.placeholder=el.getAttribute('data-'+lang+'-ph')});
+ if(featuredCards.length) updateFeatured();
+});
+document.getElementById('menu').onclick=()=>document.getElementById('mobile').classList.toggle('open');
+document.querySelectorAll('.mobile a').forEach(a=>a.onclick=()=>document.getElementById('mobile').classList.remove('open'));
+const modal=document.getElementById('modal');
+document.querySelectorAll('.details').forEach(b=>b.onclick=()=>{document.getElementById('modalTitle').textContent=b.dataset.title;document.getElementById('modalDesc').textContent=b.dataset.desc;modal.classList.add('open')});
+document.getElementById('close').onclick=()=>modal.classList.remove('open');
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
+document.getElementById('contactForm').onsubmit=e=>{e.preventDefault();const f=e.target;const msg=`الاسم: ${f.elements[0].value}%0Aالبريد: ${f.elements[1].value}%0Aالتفاصيل: ${f.elements[2].value}`;window.open('https://wa.me/966508556937?text='+msg,'_blank')};
+</script>
+</body></html>
